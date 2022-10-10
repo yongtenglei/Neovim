@@ -29,7 +29,10 @@ return require("packer").startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "p00f/nvim-ts-rainbow" })
 	-- requires
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- requires
+  use({
+    "nvim-telescope/telescope-fzf-native.nvim",
+    run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+  })
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
 	use({ "phaazon/hop.nvim", branch = "v2" }) --rv2' optional but strongly recommended
@@ -53,6 +56,8 @@ return require("packer").startup(function(use)
 	use({ "rafamadriz/friendly-snippets" })
 	use({ "ray-x/cmp-treesitter" })
 	use({ "onsails/lspkind.nvim" })
+
+	use({ "j-hui/fidget.nvim" })
 
 	use({ "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" } })
 
@@ -86,4 +91,9 @@ return require("packer").startup(function(use)
 		"rebelot/kanagawa.nvim",
 		"sainnhe/everforest",
 	})
+
+	-- benchmark
+	use({ "dstein64/vim-startuptime" })
+
+	use({ "rcarriga/nvim-notify" })
 end)
