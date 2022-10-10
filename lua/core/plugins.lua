@@ -29,10 +29,10 @@ return require("packer").startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({ "p00f/nvim-ts-rainbow" })
 	-- requires
-  use({
-    "nvim-telescope/telescope-fzf-native.nvim",
-    run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-  })
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	})
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
 	use({ "phaazon/hop.nvim", branch = "v2" }) --rv2' optional but strongly recommended
@@ -73,6 +73,8 @@ return require("packer").startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
+
+	use({ "mbbill/undotree" })
 
 	use({ "lervag/vimtex" })
 
