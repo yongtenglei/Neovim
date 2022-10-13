@@ -19,6 +19,11 @@ require("configs.fidget").config()
 require("configs.null-ls").config()
 require("configs.hop").config()
 require("configs.lastplace").config()
+require("configs.gitsigns").config()
+require("configs.toggleterm").config()
 require("configs.nvimcolorizer").config()
-require("configs.theme.gruvbox").config()
 require("configs.undotree").config()
+
+-- theme
+--require("configs.theme.gruvbox").config()
+require("configs.theme.kanagawa").config()

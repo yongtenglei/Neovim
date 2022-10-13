@@ -2,11 +2,20 @@ local M = {}
 function M.config()
 	local null_ls = require("null-ls")
 	local formatting = null_ls.builtins.formatting
+	local diagnostics = null_ls.builtins.diagnostics
+	local actions = null_ls.builtins.code_actions
+	local hover = null_ls.builtins.hover
 
 	local sources = {
-		formatting.prettier,
-		formatting.autopep8,
+		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
+
+		diagnostics.flake8,
+
+		actions.gitsigns,
+
+		hover.dictionary,
 	}
 
 	local augroup = vim.api.nvim_create_augroup("LspFormatting", {})

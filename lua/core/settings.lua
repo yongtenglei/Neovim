@@ -4,13 +4,13 @@ vim.cmd("filetype plugin indent on")
 vim.cmd("nohlsearch")
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.termguicolors = true
 vim.opt.shiftround = true
 vim.opt.updatetime = 100
 vim.opt.cursorline = true
-if vim.fn.has("termguicolors") == 1 then
-	vim.opt.termguicolors = true
-end
+vim.opt.termguicolors = true
+--if vim.fn.has("termguicolors") == 1 then
+--vim.opt.termguicolors = true
+--end
 
 -- searchv
 vim.opt.hlsearch = true
@@ -49,12 +49,18 @@ vim.opt.foldlevel = 99
 vim.opt.laststatus = 2
 vim.opt.autochdir = true
 vim.opt.clipboard = "unnamedplus"
+vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.opt.lazyredraw = true
 vim.opt.compatible = false
 vim.opt.shell = "/bin/bash"
 vim.opt.signcolumn = "yes"
 vim.opt.backup = false
 vim.opt.writebackup = false
+
+vim.opt.shortmess:append({ c = true })
+vim.opt.whichwrap:append({ ["<"] = true, [">"] = true, [","] = true, h = true, l = true })
+vim.cmd([[set iskeyword+=-]])
 
 -- presistent undo
 vim.bo.undofile = true
