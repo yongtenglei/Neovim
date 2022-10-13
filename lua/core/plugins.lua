@@ -143,6 +143,7 @@ return require("packer").startup(function(use)
 
 	-- benchmark
 	use({ "dstein64/vim-startuptime" })
+	use({ "lewis6991/impatient.nvim" })
 
 	use({ "rcarriga/nvim-notify" })
 end)

@@ -1,3 +1,5 @@
+require("impatient")
+
 require("core.settings")
 require("core.keymaps")
 require("core.colemak")
