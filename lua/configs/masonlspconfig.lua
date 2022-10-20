@@ -6,7 +6,7 @@ function M.config()
     ensure_installed = {
       "sumneko_lua",
       "rust_analyzer",
-      "cland",
+      "clangd",
       "cmake",
       "cssls",
       "gopls",
@@ -24,7 +24,6 @@ function M.config()
       "yamlls",
     },
 
-
     -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
     -- This setting has no relation with the `ensure_installed` setting.
     -- Can either be:
@@ -33,7 +32,7 @@ function M.config()
     --   - { exclude: string[] }: All servers set up via lspconfig, except the ones provided in the list, are automatically installed.
     --       Example: automatic_installation = { exclude = { "rust_analyzer", "solargraph" } }
     automatic_installation = true,
-})
+  })
 end
 
 return M
