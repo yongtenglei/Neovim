@@ -1,6 +1,5 @@
-vim.keymap.set("n", "l", "u")
-vim.keymap.set("n", "k", "i")
-vim.keymap.set("n", "K", "I")
+vim.keymap.set("n", "l", "u", { noremap = true, silent = true })
+vim.keymap.set("n", "k", "i", { noremap = true, silent = true })
 vim.keymap.set("n", "u", "k", { noremap = true, silent = true })
 vim.keymap.set("n", "n", "h", { noremap = true, silent = true })
 vim.keymap.set("n", "e", "j", { noremap = true, silent = true })
@@ -19,3 +18,13 @@ vim.keymap.set("v", "e", "j", { noremap = true, silent = true })
 vim.keymap.set("v", "i", "l", { noremap = true, silent = true })
 vim.keymap.set("v", "U", "5k", { noremap = true, silent = true })
 vim.keymap.set("v", "E", "5j", { noremap = true, silent = true })
+
+vim.cmd([[
+  sunmap u
+  sunmap n
+  sunmap e
+  sunmap i
+  sunmap U
+  sunmap E
+  sunmap r
+]])

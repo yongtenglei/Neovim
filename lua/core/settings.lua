@@ -29,8 +29,8 @@ vim.opt.smartindent = true
 
 vim.opt.list = true
 vim.opt.listchars = {
-	tab = "▸ ",
-	trail = "▫",
+  tab = "▸ ",
+  trail = "▫",
 }
 
 vim.opt.mouse = "a"
@@ -49,7 +49,7 @@ vim.opt.foldlevel = 99
 vim.opt.laststatus = 2
 vim.opt.autochdir = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+vim.opt.completeopt = { "menu", "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.opt.lazyredraw = true
 vim.opt.compatible = false
@@ -71,8 +71,8 @@ vim.opt.spelllang = { "en_us" }
 
 -- Disables automatic commenting on newline
 vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = { "*" },
-	command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o",
+  pattern = { "*" },
+  command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o",
 })
 
 -- Automatically deletes all trailing whitespace and newlines at end of file on save
@@ -100,12 +100,12 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 
 -- Runs a script that cleans out tex build files whenever I close out of a .tex file
 vim.api.nvim_create_autocmd({ "VimLeave" }, {
-	pattern = { "*.tex" },
-	command = "!texclear %",
+  pattern = { "*.tex" },
+  command = "!texclear %",
 })
 
 -- filetype for plantuml
 vim.api.nvim_create_autocmd({ "BufNewFile,BufRead" }, {
-	pattern = { "*.puml" },
-	command = "set filetype=plantuml",
+  pattern = { "*.puml" },
+  command = "set filetype=plantuml",
 })
