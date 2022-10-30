@@ -95,6 +95,8 @@ function M.config()
 	})
 	-- add fzf_native plugin
 	telescope.load_extension("fzf")
+	-- add noice plugin
+	telescope.load_extension("fzf")
 
 	local builtin = require("telescope.builtin")
 	vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
@@ -103,6 +105,7 @@ function M.config()
 	vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 	vim.keymap.set("n", "<leader>fc", builtin.command_history, {})
 	vim.keymap.set("n", "<leader>fs", builtin.search_history, {})
+	vim.keymap.set("n", "<leader>fn", ":Noice telescope<cr>")
 end
 
 return M

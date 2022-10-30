@@ -148,5 +148,8 @@ return require("packer").startup(function(use)
   use({ "dstein64/vim-startuptime" })
   use({ "lewis6991/impatient.nvim" })
 
+  -- UI
+  use({ "folke/noice.nvim" })
+  use({ "MunifTanjim/nui.nvim" })
   use({ "rcarriga/nvim-notify" })
 end)

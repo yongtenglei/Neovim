@@ -6,6 +6,7 @@ require("core.colemak")
 
 require("core.plugins")
 require("configs.notify").config()
+require("configs.noice").config()
 require("configs.alpha").config()
 require("configs.nvimtree").config()
 require("configs.treesitter").config()
