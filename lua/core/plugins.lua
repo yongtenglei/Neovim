@@ -141,8 +141,14 @@ return require("packer").startup(function(use)
     "sainnhe/everforest",
   })
 
+  -- surround
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+  })
+
   -- translator
-  use({ "voldikss/vim-translator" })
+  --use({ "voldikss/vim-translator" })
 
   -- benchmark
   use({ "dstein64/vim-startuptime" })

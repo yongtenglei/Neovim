@@ -26,6 +26,7 @@ require("configs.gitsigns").config()
 require("configs.toggleterm").config()
 require("configs.nvimcolorizer").config()
 require("configs.undotree").config()
+require("configs.surround").config()
 
 -- theme
 --require("configs.theme.gruvbox").config()
