@@ -133,6 +133,7 @@ function M.config()
 				},
 			},
 			{ name = "treesitter" },
+			{ name = "calc" },
 			{ name = "path" },
 			{ name = "nvim_lua" },
 			{ name = "spell" },
