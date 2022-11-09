@@ -28,6 +28,9 @@ require("configs.nvimcolorizer").config()
 require("configs.undotree").config()
 require("configs.surround").config()
 
+require("configs.dap").config()
+require("configs.gopher").config()
+
 -- theme
 --require("configs.theme.gruvbox").config()
 require("configs.theme.kanagawa").config()

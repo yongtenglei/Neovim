@@ -1,5 +1,4 @@
 source ~/.config/nvim/old/common.vim
-source ~/.config/nvim/old/vim-go.vim
 source ~/.config/nvim/old/md-snippets.vim
 source ~/.config/nvim/old/markdown.vim
 source ~/.config/nvim/old/markdown_preview.vim

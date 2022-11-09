@@ -12,6 +12,7 @@ function M.config()
 			"css",
 			"gitignore",
 			"go",
+			"gomod",
 			"html",
 			"json",
 			"latex",

@@ -99,6 +99,14 @@ return require("packer").startup(function(use)
 	use({ "ray-x/cmp-treesitter" })
 	use({ "onsails/lspkind.nvim" })
 
+	-- languages
+	use({ "mfussenegger/nvim-dap" })
+	use({ "theHamsta/nvim-dap-virtual-text" })
+	use({ "rcarriga/nvim-dap-ui" })
+
+	use({ "olexsmir/gopher.nvim" })
+	use({ "leoluz/nvim-dap-go" })
+
 	-- Git
 	use({ "lewis6991/gitsigns.nvim" })
 
@@ -108,8 +116,6 @@ return require("packer").startup(function(use)
 	use({ "j-hui/fidget.nvim" })
 
 	use({ "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" } })
-
-	use({ "fatih/vim-go", run = ":GoInstallBinaried" })
 
 	use({ "h-hg/fcitx.nvim" })
 
