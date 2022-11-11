@@ -29,8 +29,8 @@ vim.opt.smartindent = true
 
 vim.opt.list = true
 vim.opt.listchars = {
-	tab = "▸ ",
-	trail = "▫",
+  tab = "▸ ",
+  trail = "▫",
 }
 
 vim.opt.mouse = "a"
@@ -55,6 +55,7 @@ vim.opt.lazyredraw = false
 vim.opt.compatible = false
 vim.opt.shell = "/bin/bash"
 vim.opt.signcolumn = "yes"
+vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
 
@@ -71,8 +72,8 @@ vim.opt.spelllang = { "en_us" }
 
 -- Disables automatic commenting on newline
 vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = { "*" },
-	command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o",
+  pattern = { "*" },
+  command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o",
 })
 
 -- Automatically deletes all trailing whitespace and newlines at end of file on save
@@ -104,21 +105,21 @@ local ag = vim.api.nvim_create_augroup
 
 ---Highlight the texts when you yanked
 au("TextYankPost", {
-	group = ag("yank_highlight", {}),
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 300 })
-	end,
+  group = ag("yank_highlight", {}),
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 300 })
+  end,
 })
 
 -- Runs a script that cleans out tex build files whenever I close out of a .tex file
 vim.api.nvim_create_autocmd({ "VimLeave" }, {
-	pattern = { "*.tex" },
-	command = "!texclear %",
+  pattern = { "*.tex" },
+  command = "!texclear %",
 })
 
 -- filetype for plantuml
 vim.api.nvim_create_autocmd({ "BufNewFile,BufRead" }, {
-	pattern = { "*.puml" },
-	command = "set filetype=plantuml",
+  pattern = { "*.puml" },
+  command = "set filetype=plantuml",
 })
