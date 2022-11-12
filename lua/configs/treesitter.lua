@@ -18,6 +18,7 @@ function M.config()
 			"latex",
 			"make",
 			"markdown",
+			"markdown_inline",
 			"r",
 			"sql",
 			"toml",
@@ -25,6 +26,7 @@ function M.config()
 			"vue",
 			"yaml",
 			"javascript",
+			"regex",
 		},
 
 		-- Install parsers synchronously (only applied to `ensure_installed`)

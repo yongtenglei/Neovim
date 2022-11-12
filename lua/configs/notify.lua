@@ -28,7 +28,8 @@ function M.config()
 		},
 	})
 
-	vim.notify = notify
+	--handled by noice
+	--vim.notify = notify
 end
 
 return M
