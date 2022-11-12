@@ -96,10 +96,16 @@ function M.config()
 	})
 	-- add fzf_native plugin
 	telescope.load_extension("fzf")
-	-- add noice plugin
-	telescope.load_extension("fzf")
 
+	-- mapping function
 	local builtin = require("telescope.builtin")
+	local theme = require("telescope.themes")
+
+	local curr_buff = function()
+		local opt = theme.get_ivy()
+		builtin.current_buffer_fuzzy_find(opt)
+	end
+
 	vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 	vim.keymap.set("n", "<leader>fF", ":Telescope find_files cwd=")
 	vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
@@ -108,6 +114,13 @@ function M.config()
 	vim.keymap.set("n", "<leader>fc", builtin.command_history, {})
 	vim.keymap.set("n", "<leader>fs", builtin.search_history, {})
 	vim.keymap.set("n", "<leader>fn", ":Noice telescope<cr>")
+	vim.keymap.set(
+		"n",
+		"<C-_>", -- <C-_> means <C-/> for some historical reason
+		curr_buff,
+		{}
+		--":Telescope current_buffer_fuzzy_find sorting_strategy=ascending theme=ivy <cr>" -- vim script format
+	)
 end
 
 return M
