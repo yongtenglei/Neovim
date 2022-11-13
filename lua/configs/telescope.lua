@@ -113,6 +113,7 @@ function M.config()
 	vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 	vim.keymap.set("n", "<leader>fc", builtin.command_history, {})
 	vim.keymap.set("n", "<leader>fs", builtin.search_history, {})
+	vim.keymap.set("n", "<leader>fo", builtin.oldfiles, {})
 	vim.keymap.set("n", "<leader>fn", ":Noice telescope<cr>")
 	vim.keymap.set(
 		"n",
