@@ -146,6 +146,7 @@ return require("packer").startup(function(use)
 		"Rigellute/shades-of-purple.vim",
 		"rebelot/kanagawa.nvim",
 		"sainnhe/everforest",
+		"catppuccin/nvim",
 	})
 
 	-- surround

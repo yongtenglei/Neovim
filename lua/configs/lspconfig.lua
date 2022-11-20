@@ -138,6 +138,7 @@ function M.config()
 			{ name = "nvim_lua" },
 			{ name = "spell" },
 		}),
+
 		formatting = {
 			fields = {
 				cmp.ItemField.Abbr,
@@ -177,6 +178,23 @@ function M.config()
 					return vim_item
 				end,
 			}),
+		},
+
+		--enable catppuccin integration
+		native_lsp = {
+			enabled = true,
+			virtual_text = {
+				errors = { "italic" },
+				hints = { "italic" },
+				warnings = { "italic" },
+				information = { "italic" },
+			},
+			underlines = {
+				errors = { "underline" },
+				hints = { "underline" },
+				warnings = { "underline" },
+				information = { "underline" },
+			},
 		},
 	})
 

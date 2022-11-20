@@ -4,6 +4,11 @@ require("core.settings")
 require("core.keymaps")
 require("core.colemak")
 
+-- themes (some themes should have a higher priority, like catppuccin...)
+--require("configs.theme.gruvbox").config()
+--require("configs.theme.kanagawa").config()
+require("configs.theme.catppuccin").config()
+
 require("core.plugins")
 require("configs.notify").config()
 require("configs.noice").config()
@@ -32,7 +37,3 @@ require("configs.surround").config()
 
 require("configs.dap").config()
 require("configs.gopher").config()
-
--- theme
---require("configs.theme.gruvbox").config()
-require("configs.theme.kanagawa").config()
