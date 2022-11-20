@@ -34,6 +34,7 @@ require("configs.toggleterm").config()
 require("configs.nvimcolorizer").config()
 require("configs.undotree").config()
 require("configs.surround").config()
+require("configs.aerial").config()
 
 require("configs.dap").config()
 require("configs.gopher").config()

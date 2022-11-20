@@ -86,7 +86,7 @@ function M.config()
 			neotree = { enabled = false, show_root = true, transparent_panel = false },
 			telekasten = false,
 			mini = false,
-			aerial = false,
+			aerial = true,
 			vimwiki = true,
 			beacon = false,
 			navic = { enabled = false },

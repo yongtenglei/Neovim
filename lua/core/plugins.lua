@@ -138,6 +138,8 @@ return require("packer").startup(function(use)
 
 	use({ "chentoast/marks.nvim" })
 
+	use({ "stevearc/aerial.nvim" })
+
 	-- themes
 	use({
 		"sainnhe/gruvbox-material",
