@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader><cr>", ":nohlsearch<cr>", opts)
 
 vim.keymap.set("n", ";", ":")
 vim.keymap.set("n", "<c-u>", ":w<enter>", opts)
-vim.keymap.set("i", "<c-u>", ":esc", opts)
+vim.keymap.set("i", "<c-u>", "<esc>", opts)
 vim.keymap.set("n", "Q", ":q!<enter>", opts)
 vim.keymap.set("v", "Y", '"+y', opts)
 vim.keymap.set("n", "<", "<<", opts)
@@ -84,9 +84,9 @@ vim.keymap.set("n", "zc", ":lclose<cr>", opts)
 
 -- refersh buffer
 local function refreshBuf()
-  vim.cmd("set noconfirm")
-  vim.cmd("bufdo e !")
-  vim.cmd("set confirm")
+	vim.cmd("set noconfirm")
+	vim.cmd("bufdo e !")
+	vim.cmd("set confirm")
 end
 
 vim.keymap.set("n", "<leader>rb", refreshBuf)
